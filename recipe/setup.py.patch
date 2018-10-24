@@ -1,0 +1,11 @@
+diff --git a/setup.py b/setup.py
+--- a/setup.py
++++ b/setup.py
+@@ -320,6 +320,7 @@ def try_compile(cpp_code, cc, cflags=[], lflags=[]):
+                 cpp = 'g++'
+             else:
+                 cpp = 'c++'
++        cpp = os.environ.get('CXX', 'c++')
+         cmd = cpp + ' ' + ' '.join(lflags + [os_file.name,'-o',exe_file.name])
+         #print('cmd = ',cmd)
+         try:
