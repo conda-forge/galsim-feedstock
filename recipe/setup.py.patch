@@ -5,7 +5,7 @@ diff --git a/setup.py b/setup.py
                  cpp = 'g++'
              else:
                  cpp = 'c++'
-+        cpp = os.environ.get('CXX', 'c++')
++        cpp = os.environ.get('CXX', cpp)
          cmd = cpp + ' ' + ' '.join(lflags + [os_file.name,'-o',exe_file.name])
          #print('cmd = ',cmd)
          try:
