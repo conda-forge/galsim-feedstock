@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.1.4" %}
-{% set sha256 = "4238a69acd978305cb947b587d109b91abab30615e67d0350c84b264f5ce6859" %}
+{% set version = "2.1.5" %}
+{% set sha256 = "a60467d20a23910d579453a7d51d5e4d845ef4c814fd607f400904815876366e" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - setup.py.patch
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
