@@ -1,26 +1,23 @@
 {% set name = "GalSim" %}
-{% set version = "2.1.6" %}
-{% set sha256 = "f04442e6e3159029c54ce0d61836f413302c0fcf5331439631ddb46d0aeacb7a" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "d5eada22e902c1fe6958751cd2317d4a15a7d8f3f29fcaeaed3d697e423d21c7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - setup.py.patch
 
 build:
   number: 0
   skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - scons
   host:
     - python
     - setuptools >=38
