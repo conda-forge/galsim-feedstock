@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - 0001-remove-run-install-checks.patch
 
 build:
   number: 0
@@ -18,11 +20,13 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - scons
+    - numpy
+    - pybind11 ==2.2.4
   host:
     - python
     - setuptools >=38
     - pip
-    - pybind11 >=2.2
+    - pybind11 ==2.2.4
     - fftw >=3.3
     - eigen >=3.3
 
@@ -31,7 +35,7 @@ requirements:
     - numpy
     - future >=0.15
     - astropy >=2.0
-    - pybind11 >=2.2
+    - pybind11 ==2.2.4
     - fftw >=3.3
     - eigen >=3.3
     - lsstdesc.coord >=1.0.5
