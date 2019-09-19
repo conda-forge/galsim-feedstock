@@ -2,7 +2,7 @@ if [ -n "${GXX}" ]; then
     # SConstruct wants to find 'g++' in name
     CXX=${GXX}
 fi
-export SCONSFLAGS="PREFIX=$PREFIX PYPREFIX=$PREFIX/lib/python PYBIND11_DIR=$PREFIX EIGEN_DIR=$PREFIX/include/eigen3 CXX=$CXX"
+export SCONSFLAGS="PREFIX=$PREFIX PYPREFIX=$PREFIX/lib/python PYBIND11_DIR=$PREFIX EIGEN_DIR=$PREFIX/include/eigen3 FFTW_DIR=$PREFIX CXX=$CXX"
 
 scons
 scons install

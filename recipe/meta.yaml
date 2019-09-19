@@ -20,10 +20,9 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - scons
-    - numpy
-    - pybind11 ==2.2.4
   host:
     - python
+    - numpy
     - setuptools >=38
     - pip
     - pybind11 ==2.2.4
