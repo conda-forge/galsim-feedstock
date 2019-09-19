@@ -1,5 +1,5 @@
 SCONSFLAGS+=" USE_UNKNOWN_VARS=true"
-if [ -z "${GXX}" ]; then
+if [ -n "${GXX}" ]; then
     # SConstruct wants to find 'g++' in name
     CXX=${GXX}
 fi
