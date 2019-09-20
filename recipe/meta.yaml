@@ -20,12 +20,11 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - scons
+
   host:
     - python
     - numpy
-    - setuptools >=38
-    - pip
-    - pybind11 ==2.2.4
+    - pybind11 >=2.2
     - fftw >=3.3
     - eigen >=3.3
 
@@ -34,7 +33,7 @@ requirements:
     - numpy
     - future >=0.15
     - astropy >=2.0
-    - pybind11 ==2.2.4
+    - pybind11 >=2.2
     - fftw >=3.3
     - eigen >=3.3
     - lsstdesc.coord >=1.0.5
