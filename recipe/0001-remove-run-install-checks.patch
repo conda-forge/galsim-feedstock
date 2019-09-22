@@ -1,0 +1,17 @@
+diff --git a/SConstruct b/SConstruct
+index 6a368e37a..dc945df63 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -2112,9 +2112,9 @@ def DoPyChecks(config):
+     else:
+         config.CheckEigen()
+     config.CheckNumPy()
+-    config.CheckPyFITS()
+-    config.CheckFuture()
+-    config.CheckCoord()
++    # config.CheckPyFITS()
++    # config.CheckFuture()
++    # config.CheckCoord()
+     if config.env['USE_BOOST']:
+         config.CheckBoostPython()
+     else:
