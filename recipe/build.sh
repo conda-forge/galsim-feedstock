@@ -18,3 +18,5 @@ export SCONSFLAGS+="FFTW_DIR=$PREFIX/lib PYBIND11_DIR=$PREFIX EIGEN_DIR=$PREFIX/
 
 scons
 scons install
+cp include/GalSim.h "$PREFIX/include"
+cp -r include/galsim "$PREFIX/include"
