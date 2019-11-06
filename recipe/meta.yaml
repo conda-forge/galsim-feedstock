@@ -13,7 +13,7 @@ source:
     - 0001-remove-run-install-checks.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - python
     - numpy
     - pybind11 >=2.2
-    - fftw >=3.3
+    - fftw
     - eigen >=3.3
 
   run:
@@ -34,7 +34,6 @@ requirements:
     - future >=0.15
     - astropy >=2.0
     - pybind11 >=2.2
-    - fftw >=3.3
     - eigen >=3.3
     - lsstdesc.coord >=1.0.5
 
