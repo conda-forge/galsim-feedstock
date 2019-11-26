@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.2.2" %}
-{% set sha256 = "a665606eabc52fe2631c0c3d5f7ac3fc66200272784a9d2a81822f2434762d4d" %}
+{% set version = "2.2.3" %}
+{% set sha256 = "aee59109dfde668fd319c79fca9c72ff66ab8df4cc09545f302d336da7e1a888" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
     - 0001-remove-run-install-checks.patch
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
 
 requirements:
