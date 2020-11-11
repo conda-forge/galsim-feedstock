@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - scons
+    - scons <4
 
   host:
     - python
