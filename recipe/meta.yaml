@@ -12,8 +12,7 @@ source:
   patches:
     - 0001-remove-run-install-checks.patch
     - 0002-bypass-fmath-non-intel-cpus.patch
-    - 0003-enable-cross-compiling-scons.patch
-    - 0004-support-scons-4.patch
+    - 0003-add-cross-compiling-and-scons-4.patch
 
 build:
   number: 2
