@@ -29,7 +29,7 @@ requirements:
 
   host:
     - python
-    - numpy  # {{ pin_compatible('numpy') }}
+    - numpy
     - pybind11 >=2.2
     - fftw
     - eigen >=3.3
