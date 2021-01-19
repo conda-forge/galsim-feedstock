@@ -11,15 +11,20 @@ source:
   sha256: {{ sha256 }}
   patches:
     - 0001-remove-run-install-checks.patch
+    - 0002-bypass-fmath-non-intel-cpus.patch
+    - 0003-add-cross-compiling-and-scons-4.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    - scons <4
+    - scons
 
   host:
     - python

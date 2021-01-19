@@ -1,0 +1,43 @@
+--- a/include/galsim/fmath/fmath.hpp
++++ b/include/galsim/fmath/fmath.hpp
+@@ -33,6 +33,11 @@
+ #include <stdlib.h>
+ #include <float.h>
+ #include <string.h> // for memcpy
++
++#ifdef __SSE__
++// Optimized fmath required intel cpus and SSE instructions
++#define HAS_FMATH
++
+ #if defined(_WIN32) && !defined(__GNUC__)
+ 	#include <intrin.h>
+ 	#ifndef MIE_ALIGN
+@@ -849,3 +854,28 @@ __m128 (*const exp_ps)(__m128) = local::C<>::getInstance().exp_ps_;
+ inline float exp2(float x) { return fmath::exp(x * 0.6931472f); }
+ 
+ } // fmath
++
++#else // __SSE__
++
++#include <cmath>
++
++namespace fmath {
++
++inline float exp(float x)
++{
++  return std::exp(x);
++}
++
++inline double expd(double x)
++{
++  return std::exp(x);
++}
++
++inline float log(float x)
++{
++  return std::log(x);
++}
++
++} // fmath
++
++#endif
