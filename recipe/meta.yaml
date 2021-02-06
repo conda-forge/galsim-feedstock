@@ -15,7 +15,7 @@ source:
     - 0003-add-cross-compiling-and-scons-4.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
