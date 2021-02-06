@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.2.4" %}
-{% set sha256 = "216d7c02bec692cd066eac41369f66bca626d2b0bc88c764dda2b3cb72d803d8" %}
+{% set version = "2.2.5" %}
+{% set sha256 = "d0097e274a9cb1980a2a13bb208c810d151965ee39a92f4883b5529722149769" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
     - 0003-add-cross-compiling-and-scons-4.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
