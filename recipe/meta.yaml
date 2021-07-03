@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.2.5" %}
-{% set sha256 = "d0097e274a9cb1980a2a13bb208c810d151965ee39a92f4883b5529722149769" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "2f6ddde080201bb4252195b1a700177b17cab34ee138ed7d2d3666ef7d0c158b" %}
 
 package:
   name: {{ name|lower }}
@@ -11,8 +11,6 @@ source:
   sha256: {{ sha256 }}
   patches:
     - 0001-remove-run-install-checks.patch
-    - 0002-bypass-fmath-non-intel-cpus.patch
-    - 0003-add-cross-compiling-and-scons-4.patch
 
 build:
   number: 0
@@ -36,7 +34,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - future >=0.15
     - astropy >=2.0
     - pybind11 >=2.2
     - eigen >=3.3
@@ -48,7 +45,7 @@ test:
 
 about:
   home: https://github.com/GalSim-developers/GalSim
-  license: BSD
+  license: MIT AND BSD-2-Clause
   license_file: LICENSE
   summary: The modular galaxy image simulation toolkit
   description: |
