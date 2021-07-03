@@ -7,8 +7,10 @@ index 6a368e37a..dc945df63 100644
          config.CheckEigen()
      config.CheckNumPy()
 -    config.CheckPyFITS()
+-    config.CheckFuture()
 -    config.CheckCoord()
 +    # config.CheckPyFITS()
++    # config.CheckFuture()
 +    # config.CheckCoord()
      if config.env['USE_BOOST']:
          config.CheckBoostPython()
