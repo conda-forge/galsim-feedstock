@@ -11,8 +11,6 @@ source:
   sha256: {{ sha256 }}
   patches:
     - 0001-remove-run-install-checks.patch
-    - 0002-bypass-fmath-non-intel-cpus.patch
-    - 0003-add-cross-compiling-and-scons-4.patch
 
 build:
   number: 0
@@ -36,7 +34,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - future >=0.15
     - astropy >=2.0
     - pybind11 >=2.2
     - eigen >=3.3
@@ -48,7 +45,7 @@ test:
 
 about:
   home: https://github.com/GalSim-developers/GalSim
-  license: BSD
+  license: MIT AND BSD-2-Clause
   license_file: LICENSE
   summary: The modular galaxy image simulation toolkit
   description: |
