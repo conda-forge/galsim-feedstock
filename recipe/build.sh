@@ -2,7 +2,7 @@
 
 set -x
 
-export $LDFLAGS="$LDFLAGS -lfftw3 -fopenmp -lstdc++ -lm"
+export LDFLAGS="$LDFLAGS -lfftw3 -fopenmp -lstdc++ -lm"
 
 ${PYTHON} -m pip install . -vv --install-option="-j${CPU_COUNT}"
 ${PYTHON} -j${CPU_COUNT} setup.py build_shared_clib
