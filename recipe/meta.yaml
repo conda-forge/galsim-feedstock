@@ -27,6 +27,7 @@ requirements:
     - pybind11 >=2.2
     - fftw
     - eigen >=3.3
+    - pip
 
   run:
     - python
