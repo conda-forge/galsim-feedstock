@@ -42,6 +42,9 @@ requirements:
 test:
   imports:
     - galsim
+  commands:
+    - ldd $PREFIX/lib/libgalsim.so  # [linux]
+    - test -f $PREFIX/lib/libgalsim${SHLIB_EXT}
 
 about:
   home: https://github.com/GalSim-developers/GalSim
