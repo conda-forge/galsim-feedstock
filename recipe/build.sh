@@ -5,7 +5,7 @@ set -x
 export LDFLAGS="$LDFLAGS -lfftw3 -fopenmp -lstdc++ -lm"
 
 ${PYTHON} -m pip install . -vv --install-option="-j${CPU_COUNT}"
-${PYTHON} -j${CPU_COUNT} setup.py build_shared_clib
+${PYTHON} setup.py build_shared_clib -j${CPU_COUNT}
 
 cp include/GalSim.h "$PREFIX/include"
 cp -r include/galsim "$PREFIX/include"
