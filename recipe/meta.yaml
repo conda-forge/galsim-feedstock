@@ -48,7 +48,8 @@ test:
     - otool -L $PREFIX/lib/libgalsim.dylib  # [osx]
     - test -f $PREFIX/lib/libgalsim${SHLIB_EXT}
     - test -L $PREFIX/lib/libgalsim${SHLIB_EXT}
-    - test -f $PREFIX/include/galsim.h
+    - test -f $PREFIX/include/GalSim.h
+    - test -d $PREFIX/include/galsim 
 
 about:
   home: https://github.com/GalSim-developers/GalSim
