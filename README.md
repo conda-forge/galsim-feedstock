@@ -3,7 +3,7 @@ About galsim
 
 Home: https://github.com/GalSim-developers/GalSim
 
-Package license: BSD
+Package license: MIT AND BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/galsim-feedstock/blob/master/LICENSE.txt)
 
