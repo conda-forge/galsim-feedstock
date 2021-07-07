@@ -43,8 +43,12 @@ test:
   imports:
     - galsim
   commands:
+    - ls -lah $PREFIX/lib/libgalsim*
     - ldd $PREFIX/lib/libgalsim.so  # [linux]
+    - otool -L $PREFIX/lib/libgalsim.dylib  # [osx]
     - test -f $PREFIX/lib/libgalsim${SHLIB_EXT}
+    - test -L $PREFIX/lib/libgalsim${SHLIB_EXT}
+    - test -f $PREFIX/include/galsim.h
 
 about:
   home: https://github.com/GalSim-developers/GalSim
@@ -64,3 +68,4 @@ extra:
   recipe-maintainers:
     - beckermr
     - rmjarvis
+    - erykoff
