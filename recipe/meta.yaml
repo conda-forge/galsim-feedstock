@@ -10,7 +10,7 @@ source:
   url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - 0001-remove-run-install-checks.patch
+     - 0001-patch-setup-conda-fftw-for-cross.patch
 
 build:
   number: 0
@@ -22,7 +22,8 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    - scons
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
 
   host:
     - python
@@ -30,6 +31,7 @@ requirements:
     - pybind11 >=2.2
     - fftw
     - eigen >=3.3
+    - pip
 
   run:
     - python
@@ -42,6 +44,14 @@ requirements:
 test:
   imports:
     - galsim
+  commands:
+    - ls -lah $PREFIX/lib/libgalsim*
+    - ldd $PREFIX/lib/libgalsim.so  # [linux]
+    - otool -L $PREFIX/lib/libgalsim.dylib  # [osx]
+    - test -f $PREFIX/lib/libgalsim${SHLIB_EXT}
+    - test -L $PREFIX/lib/libgalsim${SHLIB_EXT}
+    - test -f $PREFIX/include/GalSim.h
+    - test -d $PREFIX/include/galsim 
 
 about:
   home: https://github.com/GalSim-developers/GalSim
@@ -61,3 +71,4 @@ extra:
   recipe-maintainers:
     - beckermr
     - rmjarvis
+    - erykoff

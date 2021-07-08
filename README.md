@@ -209,5 +209,6 @@ Feedstock Maintainers
 =====================
 
 * [@beckermr](https://github.com/beckermr/)
+* [@erykoff](https://github.com/erykoff/)
 * [@rmjarvis](https://github.com/rmjarvis/)
 
