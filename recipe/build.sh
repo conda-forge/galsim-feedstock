@@ -2,6 +2,8 @@
 
 set -x
 
+export FFTW_DIR="$PREFIX/lib"
+
 ${PYTHON} -m pip install . -vv --install-option="-j${CPU_COUNT}"
 ${PYTHON} setup.py build_shared_clib -j${CPU_COUNT}
 

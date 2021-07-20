@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.3.1" %}
-{% set sha256 = "384b5d895e3cf7c03f5bacaf3b568f5f35e64a591bdb3547c277a899d066e3f9" %}
+{% set version = "2.3.2" %}
+{% set sha256 = "ea35db46b6759570d5de3c6fe772de3aef5be05f4e03eb4640cbe06e10e5cb31" %}
 
 package:
   name: {{ name|lower }}
@@ -9,8 +9,6 @@ package:
 source:
   url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-     - 0001-patch-setup-conda-fftw-for-cross.patch
 
 build:
   number: 0
@@ -51,7 +49,7 @@ test:
     - test -f $PREFIX/lib/libgalsim${SHLIB_EXT}
     - test -L $PREFIX/lib/libgalsim${SHLIB_EXT}
     - test -f $PREFIX/include/GalSim.h
-    - test -d $PREFIX/include/galsim 
+    - test -d $PREFIX/include/galsim
 
 about:
   home: https://github.com/GalSim-developers/GalSim
