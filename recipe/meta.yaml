@@ -9,8 +9,6 @@ package:
 source:
   url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - 0001-patch-setup-conda-fftw-for-cross.patch
 
 build:
   number: 0
