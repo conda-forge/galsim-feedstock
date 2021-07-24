@@ -15,5 +15,5 @@ if [[ ${target_platform} == osx-* ]]; then
     lname=$(basename ${PREFIX}/lib/libgalsim.*.dylib)
     echo "changing id of ${lname} w/ install_name_tool"
 
-    install_name_tool -id "@rpath/${lname}" ${PREFIX}/lib/${lname}
+    ${INSTALL_NAME_TOOL} -id "@rpath/${lname}" ${PREFIX}/lib/${lname}
 fi
