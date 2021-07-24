@@ -13,7 +13,7 @@ cp -PR build/shared_clib/libgalsim* "$PREFIX/lib"
 
 if [[ ${target_platform} == osx-* ]]; then
     lname=$(basename ${PREFIX}/lib/libgalsim.*.dylib)
-    echo "changing id of ${lanem} w/ install_name_tool"
+    echo "changing id of ${lname} w/ install_name_tool"
 
-    install_name_tool -id "@rpath/${lname}" ${lname}
+    install_name_tool -id "@rpath/${lname}" ${PREFIX}/lib/${lname}
 fi
