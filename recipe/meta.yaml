@@ -50,6 +50,7 @@ test:
     - test -L $PREFIX/lib/libgalsim${SHLIB_EXT}
     - test -f $PREFIX/include/GalSim.h
     - test -d $PREFIX/include/galsim
+    - otool -D ${PREFIX}/libgalsim.dylib | tail -n1 | grep "@rpath/libgalsim"
 
 about:
   home: https://github.com/GalSim-developers/GalSim
