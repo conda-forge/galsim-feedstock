@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -50,6 +50,7 @@ test:
     - test -L $PREFIX/lib/libgalsim${SHLIB_EXT}
     - test -f $PREFIX/include/GalSim.h
     - test -d $PREFIX/include/galsim
+    - otool -D ${PREFIX}/lib/libgalsim.dylib | tail -n1 | grep "@rpath/libgalsim"  # [osx]
 
 about:
   home: https://github.com/GalSim-developers/GalSim
