@@ -11,6 +11,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - setup_0000.patch  # [osx]
+    - setup_0001.patch  # [aarch64]
 
 build:
   number: 1
