@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.3.5" %}
-{% set sha256 = "43e5c39e59320c9ad8b70616bc3918be683b42545ddf771cd35176fbf5bf1524" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "db88cc33606daab5f78b075defed7c52c67615d0f3f91993da69514b56b9ab65" %}
 
 package:
   name: {{ name|lower }}
@@ -9,8 +9,6 @@ package:
 source:
   url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - setup_0001.patch  # [aarch64]
 
 build:
   number: 0
