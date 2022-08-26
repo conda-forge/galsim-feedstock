@@ -9,8 +9,6 @@ package:
 source:
   url: https://github.com/Galsim-Developers/galsim/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - setup_0001.patch  # [aarch64]
 
 build:
   number: 0
