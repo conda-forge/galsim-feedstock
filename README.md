@@ -1,11 +1,11 @@
-About galsim
-============
+About galsim-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/galsim-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/GalSim-developers/GalSim
 
 Package license: MIT AND BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/galsim-feedstock/blob/main/LICENSE.txt)
 
 Summary: The modular galaxy image simulation toolkit
 
