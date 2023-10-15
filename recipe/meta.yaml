@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.4.11" %}
-{% set sha256 = "04d3519f02f11611d0e2d68221cd7abc1cfc689113b1196eb7b71bc8c219af3a" %}
+{% set version = "2.5.0" %}
+{% set sha256 = "31d233244926d43734477e8769656db83541bbfaa83a6303172f2d58886fe39f" %}
 
 package:
   name: {{ name|lower }}
@@ -38,6 +38,7 @@ requirements:
     - pybind11 >=2.2
     - eigen >=3.3
     - lsstdesc.coord >=1.0.5
+    - scipy
 
 test:
   imports:
