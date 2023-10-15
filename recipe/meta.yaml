@@ -38,6 +38,7 @@ requirements:
     - pybind11 >=2.2
     - eigen >=3.3
     - lsstdesc.coord >=1.0.5
+    - scipy
 
 test:
   imports:
