@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.5.2" %}
-{% set sha256 = "e6c04e2c983e241f3cd8a52de289a3ca8bf23c3ebbb692a96fbd27c84b427060" %}
+{% set version = "2.5.3" %}
+{% set sha256 = "22051ba4bf9617eaef6f8279a346419a7cae6f31b152ba53b1c38e3064c6336a" %}
 
 package:
   name: {{ name|lower }}
@@ -20,6 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
 
