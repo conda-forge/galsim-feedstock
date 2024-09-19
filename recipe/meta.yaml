@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.5.3" %}
-{% set sha256 = "22051ba4bf9617eaef6f8279a346419a7cae6f31b152ba53b1c38e3064c6336a" %}
+{% set version = "2.6.0" %}
+{% set sha256 = "e316a0d55aa12bb773aae5134e09e195fe46be0b77353cf504b59ff48b28638a" %}
 
 package:
   name: {{ name|lower }}
@@ -31,6 +31,7 @@ requirements:
     - fftw
     - eigen >=3.3
     - pip
+    - setuptools <72,>=38
 
   run:
     - python
