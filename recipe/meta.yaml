@@ -31,7 +31,7 @@ requirements:
     - fftw
     - eigen >=3.3
     - pip
-    - setuptools
+    - setuptools <72,>=38
 
   run:
     - python
