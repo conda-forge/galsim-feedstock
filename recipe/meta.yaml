@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -35,7 +35,7 @@ requirements:
 
   run:
     - python
-    - astropy >=2.0
+    - astropy-base >=2.0
     - pybind11 >=2.2
     - eigen >=3.3
     - lsstdesc.coord >=1.0.5
