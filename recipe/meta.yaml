@@ -1,6 +1,6 @@
 {% set name = "GalSim" %}
-{% set version = "2.7.1" %}
-{% set sha256 = "48810642b820fd5497dca917292b462b22372af48df64031ffa1eb10b3728a4c" %}
+{% set version = "2.7.2" %}
+{% set sha256 = "fe602d33bc0af8bb98e6bc8c2b0e50aee274931240fa2aa43255aa7671a97959" %}
 
 package:
   name: {{ name|lower }}
