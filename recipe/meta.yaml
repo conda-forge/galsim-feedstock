@@ -33,6 +33,7 @@ requirements:
     - pip
     - setuptools >=72
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
 
   run:
     - python
