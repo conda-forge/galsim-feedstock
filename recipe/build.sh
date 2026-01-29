@@ -4,7 +4,7 @@ set -x
 
 export FFTW_DIR="$PREFIX/lib"
 
-${PYTHON} -m pip install . -vv -C--build-option=-j${CPU_COUNT}
+${PYTHON} -m pip install . -vv  # -C--build-option=-j${CPU_COUNT}
 ${PYTHON} setup.py build_shared_clib -j${CPU_COUNT}
 
 cp include/GalSim.h "$PREFIX/include"
