@@ -31,8 +31,9 @@ requirements:
     - fftw
     - eigen >=3.3
     - pip
-    - setuptools <72,>=38
+    - setuptools
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
 
   run:
     - python
